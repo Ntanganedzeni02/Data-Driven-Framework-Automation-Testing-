@@ -1,5 +1,7 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,6 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utilities.ExcelReader;
+import utilities.ExtentManager;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -25,11 +28,10 @@ public class TestBase {
     //Webdriver-done
     //Properties-done
     //logs- log4j, .log, log4j2.properties - done
-    //extentReport-
     //DB
     //excel - done
     //Mail
-    //ReportNG,extentReport
+    //ReportNG,extentReport - Done
     //Jenkins
 
     public static WebDriver driver;

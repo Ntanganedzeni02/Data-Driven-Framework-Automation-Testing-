@@ -7,13 +7,17 @@ import org.openqa.selenium.TakesScreenshot;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Date;
 
 public class TestUtil extends TestBase {
 
     public static String captureScreenshot(String testName) {
 
         String screenshotDir = System.getProperty("user.dir") + "/target/screenshots/";
-        String screenshotName = testName + "_" + System.currentTimeMillis() + ".png";
+
+        Date d= new Date();
+        String screenshotName = testName + "_" + d.toString().replace(":","_") + ".png";
+
         String fullPath = screenshotDir + screenshotName;
 
         try {

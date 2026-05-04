@@ -1,55 +1,47 @@
 package listeners;
 
-import org.testng.ITestContext;
+import com.aventstack.extentreports.*;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import org.testng.Reporter;
+import org.testng.ITestContext;
+import utilities.ExtentManager;
 import utilities.TestUtil;
-
-import java.io.IOException;
 
 public class CustomListeners implements ITestListener {
 
-    @Override
-    public void onStart(ITestContext context) {
-        System.out.println("Test Suite Started");
-    }
+    ExtentReports extent = ExtentManager.getExtent();
+    ExtentTest test;
 
-    @Override
-    public void onFinish(ITestContext context) {
-        System.out.println("Test Suite Finished");
-    }
+    ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Test Result Started");
+        test = extent.createTest(result.getName());
+        extentTest.set(test);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        System.out.println("Test Passed: " + result.getName());
+        extentTest.get().pass("Test Passed");
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
 
-        System.setProperty("org.uncommons.reportng.escape-output", "false");
+        extentTest.get().fail(result.getThrowable());
 
-        String screenshotPath = TestUtil.captureScreenshot(result.getName());
+        String path = TestUtil.captureScreenshot(result.getName());
 
-        Reporter.log("Test Failed: " + result.getName());
-        Reporter.log("<br>");
-
-        Reporter.log("<a target=\"_blank\" href=\"" + screenshotPath + "\">View Screenshot</a>");
-        Reporter.log("<br>");
-
-        Reporter.log("<a target=\"_blank\" href=\"" + screenshotPath + "\">" +
-                "<img src=\"" + screenshotPath + "\" height=\"200\" width=\"200\"/>" +
-                "</a>");
+        extentTest.get().addScreenCaptureFromPath(path, result.getName());
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        System.out.println("Test Skipped: " + result.getName());
+        extentTest.get().skip("Test Skipped");
+    }
+
+    @Override
+    public void onFinish(ITestContext context) {
+        extent.flush();
     }
 }

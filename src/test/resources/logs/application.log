@@ -115,3 +115,18 @@
 2026-05-04 15:06:07 DEBUG base.TestBase - config file loaded
 2026-05-04 15:06:07 INFO  base.TestBase - OR loaded
 2026-05-04 15:06:14 DEBUG base.TestBase - Login successful
+2026-05-04 15:19:00 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 15:19:00 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 15:19:02 DEBUG base.TestBase - config file loaded
+2026-05-04 15:19:02 INFO  base.TestBase - OR loaded
+2026-05-04 15:19:08 DEBUG base.TestBase - Login successful
+2026-05-04 16:23:43 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 16:23:43 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 16:23:44 DEBUG base.TestBase - config file loaded
+2026-05-04 16:23:44 INFO  base.TestBase - OR loaded
+2026-05-04 16:23:58 DEBUG base.TestBase - Login successful
+2026-05-04 16:57:49 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 16:57:49 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 16:57:50 DEBUG base.TestBase - config file loaded
+2026-05-04 16:57:50 INFO  base.TestBase - OR loaded
+2026-05-04 16:58:03 DEBUG base.TestBase - Login successful
