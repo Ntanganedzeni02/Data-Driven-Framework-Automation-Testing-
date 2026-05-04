@@ -1,9 +1,12 @@
-package listerners;
+package listeners;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import utilities.TestUtil;
+
+import java.io.IOException;
 
 public class CustomListeners implements ITestListener {
 
@@ -19,7 +22,7 @@ public class CustomListeners implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-        System.out.println("Starting Test: " + result.getName());
+        System.out.println("Test Result Started");
     }
 
     @Override
@@ -29,9 +32,20 @@ public class CustomListeners implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+
         System.setProperty("org.uncommons.reportng.escape-output", "false");
-        Reporter.log("Capture Screenshot");
-        Reporter.log("<a target=\"_blank\" href=\"C:\\Users\\Ntanga101\\Documents\\home.png\">Error Screenshot</a>");
+
+        String screenshotPath = TestUtil.captureScreenshot(result.getName());
+
+        Reporter.log("Test Failed: " + result.getName());
+        Reporter.log("<br>");
+
+        Reporter.log("<a target=\"_blank\" href=\"" + screenshotPath + "\">View Screenshot</a>");
+        Reporter.log("<br>");
+
+        Reporter.log("<a target=\"_blank\" href=\"" + screenshotPath + "\">" +
+                "<img src=\"" + screenshotPath + "\" height=\"200\" width=\"200\"/>" +
+                "</a>");
     }
 
     @Override
