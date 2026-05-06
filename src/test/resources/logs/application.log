@@ -130,3 +130,80 @@
 2026-05-04 16:57:50 DEBUG base.TestBase - config file loaded
 2026-05-04 16:57:50 INFO  base.TestBase - OR loaded
 2026-05-04 16:58:03 DEBUG base.TestBase - Login successful
+2026-05-04 18:21:16 INFO  base.TestBase - Config loaded
+2026-05-04 18:21:16 INFO  base.TestBase - OR loaded
+2026-05-04 18:21:16 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:21:16 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:26:41 INFO  base.TestBase - Config loaded
+2026-05-04 18:26:41 INFO  base.TestBase - OR loaded
+2026-05-04 18:26:41 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:26:41 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:29:29 INFO  base.TestBase - Config loaded
+2026-05-04 18:29:29 INFO  base.TestBase - OR loaded
+2026-05-04 18:29:29 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:29:29 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:31:03 INFO  base.TestBase - Config loaded
+2026-05-04 18:31:03 INFO  base.TestBase - OR loaded
+2026-05-04 18:31:03 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:31:03 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:33:46 INFO  base.TestBase - Config loaded
+2026-05-04 18:33:46 INFO  base.TestBase - OR loaded
+2026-05-04 18:33:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:33:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:33:54 INFO  base.TestBase - Driver closed
+2026-05-04 18:43:54 INFO  base.TestBase - Config loaded
+2026-05-04 18:43:54 INFO  base.TestBase - OR loaded
+2026-05-04 18:43:55 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-04 18:43:55 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-04 18:44:02 DEBUG base.TestBase - Login successful
+2026-05-04 18:44:03 INFO  base.TestBase - Alert text: Customer added successfully with customer id :6
+2026-05-04 18:44:04 INFO  base.TestBase - Driver closed
+2026-05-06 12:29:32 INFO  base.TestBase - Config loaded
+2026-05-06 12:29:32 INFO  base.TestBase - OR loaded
+2026-05-06 12:29:33 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:29:33 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:29:45 DEBUG base.TestBase - Login successful
+2026-05-06 12:29:47 INFO  base.TestBase - Driver closed
+2026-05-06 12:30:46 INFO  base.TestBase - Config loaded
+2026-05-06 12:30:46 INFO  base.TestBase - OR loaded
+2026-05-06 12:30:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:30:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:31:04 DEBUG base.TestBase - Login successful
+2026-05-06 12:31:07 INFO  base.TestBase - Driver closed
+2026-05-06 12:31:31 INFO  base.TestBase - Config loaded
+2026-05-06 12:31:31 INFO  base.TestBase - OR loaded
+2026-05-06 12:31:32 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:31:32 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:31:39 DEBUG base.TestBase - Login successful
+2026-05-06 12:31:40 INFO  base.TestBase - Driver closed
+2026-05-06 12:36:03 INFO  base.TestBase - Config loaded
+2026-05-06 12:36:03 INFO  base.TestBase - OR loaded
+2026-05-06 12:36:03 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:36:03 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:36:13 DEBUG base.TestBase - Login successful
+2026-05-06 12:36:14 INFO  base.TestBase - Driver closed
+2026-05-06 12:37:46 INFO  base.TestBase - Config loaded
+2026-05-06 12:37:46 INFO  base.TestBase - OR loaded
+2026-05-06 12:37:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:37:46 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:37:57 DEBUG base.TestBase - Login successful
+2026-05-06 12:37:58 INFO  base.TestBase - Driver closed
+2026-05-06 12:38:24 INFO  base.TestBase - Config loaded
+2026-05-06 12:38:24 INFO  base.TestBase - OR loaded
+2026-05-06 12:38:24 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:38:24 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:38:29 INFO  base.TestBase - Config loaded
+2026-05-06 12:38:29 INFO  base.TestBase - OR loaded
+2026-05-06 12:38:29 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:38:29 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:38:35 DEBUG base.TestBase - Login successful
+2026-05-06 12:38:40 DEBUG base.TestBase - Login successful
+2026-05-06 12:38:50 INFO  base.TestBase - Driver closed
+2026-05-06 12:38:55 INFO  base.TestBase - Driver closed
+2026-05-06 12:39:24 INFO  base.TestBase - Config loaded
+2026-05-06 12:39:24 INFO  base.TestBase - OR loaded
+2026-05-06 12:39:25 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /xl/_rels/workbook.xml.rels
+2026-05-06 12:39:25 DEBUG org.apache.poi.openxml4j.opc.PackageRelationshipCollection - Parsing relationship: /_rels/.rels
+2026-05-06 12:39:31 DEBUG base.TestBase - Login successful
+2026-05-06 12:39:33 INFO  base.TestBase - Alert text: Customer added successfully with customer id :6
+2026-05-06 12:39:33 INFO  base.TestBase - Driver closed

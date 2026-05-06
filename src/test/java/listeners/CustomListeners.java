@@ -12,14 +12,13 @@ public class CustomListeners implements ITestListener {
     ExtentReports extent = ExtentManager.getExtent();
     ExtentTest test;
 
-    ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
+    public static ThreadLocal<ExtentTest> extentTest = new ThreadLocal<>();
 
     @Override
     public void onTestStart(ITestResult result) {
-        test = extent.createTest(result.getName());
+        ExtentTest test = extent.createTest(result.getName());
         extentTest.set(test);
     }
-
     @Override
     public void onTestSuccess(ITestResult result) {
         extentTest.get().pass("Test Passed");
@@ -30,14 +29,24 @@ public class CustomListeners implements ITestListener {
 
         extentTest.get().fail(result.getThrowable());
 
-        String path = TestUtil.captureScreenshot(result.getName());
-
-        extentTest.get().addScreenCaptureFromPath(path, result.getName());
+        try {
+            String path = TestUtil.captureScreenshot(result.getName());
+            extentTest.get().addScreenCaptureFromPath(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onTestSkipped(ITestResult result) {
-        extentTest.get().skip("Test Skipped");
+
+        ExtentTest test = extentTest.get();
+
+        if (test != null) {
+            test.skip("Test Skipped: " + result.getName());
+        } else {
+            System.out.println("ExtentTest was null for skipped test: " + result.getName());
+        }
     }
 
     @Override

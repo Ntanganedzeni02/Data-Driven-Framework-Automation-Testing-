@@ -1,45 +1,32 @@
 package testcases;
 
-import base.TestBase;
+import base.Keywords;
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import utilities.TestUtil;
 
-public class AddCustomerTest extends TestBase {
+public class AddCustomerTest extends Keywords {
 
-    @Test (dataProvider = "getData")
-    public void AddCustomer( String firstname, String surname, String postcode, String alerttext) {
-        driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
-        driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstname);
-        driver.findElement(By.cssSelector(OR.getProperty("surname"))).sendKeys(surname);
-        driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postcode);
-        driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
+    @Test(dataProviderClass = TestUtil.class, dataProvider = "dp")
+    public void addCustomerTest(String firstname, String surname, String postcode, String alerttext) {
 
+        click("addCustBtn");
+        type("firstname", firstname);
+        type("surname", surname);
+        type("postcode", postcode);
+        click("addBtn");
+
+        // Wait for alert
         Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-        Assert.assertTrue(alert.getText().contains(alerttext));
+
+        String actualText = alert.getText();
+        log.info("Alert text: {}", actualText);
+
+        Assert.assertTrue(actualText.contains(alerttext),
+                "Expected alert to contain: " + alerttext);
+
         alert.accept();
-
-    }
-
-    @DataProvider
-    public Object[][] getData()  {
-        String sheetName = "AddCustomerTest";
-        int rows = excel.getRowCount(sheetName);
-        int cols = excel.getColumnCount(sheetName);
-
-        Object[][] data = new Object[rows-1][cols];
-
-        for (int rowNum = 2; rowNum <= rows; rowNum++) {
-            for (int colNum = 0; colNum < cols; colNum++) {
-
-                //Data[0][0]
-                data[rowNum-2][colNum] = excel.getCellData(sheetName,colNum, rowNum);
-            }
-        }
-        return data;
-
     }
 }
